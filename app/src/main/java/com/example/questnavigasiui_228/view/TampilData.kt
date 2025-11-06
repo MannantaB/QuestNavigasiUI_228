@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -16,6 +17,7 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.questnavigasiui_228.R
 
@@ -40,14 +42,16 @@ fun TampilData(
             verticalArrangement = Arrangement.SpaceBetween) {
             Column(modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_medium)),
                 verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_small))) {
-                items.forEach { items ->
+                items.forEach { item ->
                     Column {
                         Text(text = item.first.uppercase(),
                             fontSize = 16.sp)
                         Text(text = item.second,
                             fontWeight = FontWeight.Bold,
-                            fontFamily = FontFamily.Cursive, fontSize = Color.Cyan)
+                            fontFamily = FontFamily.Cursive, fontSize = 22.sp)
                     }
+
+
                 }
             }
         }
