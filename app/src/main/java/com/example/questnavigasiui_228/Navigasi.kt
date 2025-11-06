@@ -33,11 +33,12 @@ fun DataApp(
                     }
                 )
             }
+            composable(route = Navigasi.Detail.name) {
+                TampilData(
+                    onBackBtnClick = {cancelAndBackToFormulir(navController)}
+                )
+            }
         }
     }
 }
 
-@Composable
-fun FormIsian(OnSubmitBtnClick: () -> Unit) {
-    TODO("Not yet implemented")
-}
