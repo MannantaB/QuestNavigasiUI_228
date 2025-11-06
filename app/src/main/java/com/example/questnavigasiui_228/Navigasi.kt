@@ -7,6 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 enum class Navigasi {
@@ -25,7 +26,18 @@ fun DataApp(
             startDestination = Navigasi.Formulir.name,
 
             modifier = Modifier.padding(paddingValues = isiRuang)){
-
+            composable(route = Navigasi.Formulir.name) {
+                FormIsian(
+                    OnSubmitBtnClick = {
+                        navController.navigate(route = Navigasi.Detail.name)
+                    }
+                )
+            }
         }
     }
+}
+
+@Composable
+fun FormIsian(OnSubmitBtnClick: () -> Unit) {
+    TODO("Not yet implemented")
 }
