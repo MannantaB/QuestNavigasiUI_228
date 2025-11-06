@@ -1,6 +1,7 @@
 package com.example.questnavigasiui_228
 
 import android.widget.MediaController
+import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -21,7 +22,10 @@ fun DataApp(
     Scaffold { isiRuang->
         NavHost(
             navController = navController,
-            startDestination = Navigasi.Formulir.name
-        )
+            startDestination = Navigasi.Formulir.name,
+
+            modifier = Modifier.padding(paddingValues = isiRuang)){
+
+        }
     }
 }
